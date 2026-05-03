@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunan | Student Developer</title>
+    <meta name="description"
+        content="Portfolio of Arunan — High school student and aspiring developer focused on Python, Web Development and Open Source projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Custom Cursor (desktop only, hidden via JS on touch) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+
+    <!-- Canvas Background -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient Gradient Blobs -->
+    <div class="bg-mesh" aria-hidden="true">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">ARUNAN<span>06</span></a>
+            <div class="nav-links">
+                <a href="#about" class="hover-underline">About</a>
+                <a href="#skills" class="hover-underline">Skills</a>
+                <a href="#projects" class="hover-underline">Projects</a>
+                <a href="#connect" class="hover-underline">Connect</a>
+            </div>
+            <a href="https://github.com/arunan06" target="_blank" rel="noopener noreferrer" class="nav-btn">
+                <span class="nav-btn-text">GitHub</span>
+                <span class="nav-btn-arrow">↗</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <div class="badge reveal" data-delay="0">
+                        <span class="pulse-dot"></span>
+                        Open to Collaborate
+                    </div>
+
+                    <h1 class="hero-title reveal" data-delay="100">
+                        <span class="line"><span class="outline-text">Hello,</span></span>
+                        <span class="line">I'm <span class="gradient-text">Arunan</span></span>
+                    </h1>
+
+                    <p class="hero-subtitle reveal" data-delay="200">
+                        High school student & aspiring developer building with
+                        <span class="highlight">Python</span>,
+                        <span class="highlight">Web Dev</span> &
+                        <span class="highlight">Open Source</span>.
+                    </p>
+
+                    <div class="hero-actions reveal" data-delay="300">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                        </a>
+                        <a href="https://github.com/arunan06" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-ghost">
+                            <span>GitHub Profile</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <div class="avatar-cluster">
+                            <img src="https://avatars.githubusercontent.com/u/263474280?v=4" alt="Arunan"
+                                class="hero-avatar" loading="eager">
+                            <div class="avatar-ring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator reveal" data-delay="600">
+                <div class="mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
+                <p>Scroll down</p>
+            </div>
+        </section>
+
+        <!-- Tech Marquee -->
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>PYTHON</span><span class="dot">•</span>
+                    <span>HTML / CSS</span><span class="dot">•</span>
+                    <span>KOTLIN</span><span class="dot">•</span>
+                    <span>GIT & GITHUB</span><span class="dot">•</span>
+                    <span>OPEN SOURCE</span><span class="dot">•</span>
+                    <span>PROBLEM SOLVING</span><span class="dot">•</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>PYTHON</span><span class="dot">•</span>
+                    <span>HTML / CSS</span><span class="dot">•</span>
+                    <span>KOTLIN</span><span class="dot">•</span>
+                    <span>GIT & GITHUB</span><span class="dot">•</span>
+                    <span>OPEN SOURCE</span><span class="dot">•</span>
+                    <span>PROBLEM SOLVING</span><span class="dot">•</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+
+                <div class="about-grid">
+                    <div class="about-card about-main reveal">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                <span class="card-icon">💡</span>
+                                <span class="card-label">Who I Am</span>
+                            </div>
+                            <p class="about-text">
+                                I'm a student developer passionate about programming and problem solving.
+                                I enjoy building small applications using Python and learning modern web technologies.
+                            </p>
+                            <p class="about-text">
+                                Currently improving my skills in Python, HTML, CSS, Git and GitHub.
+                                My goal is to contribute to open-source projects and participate in programs like
+                                <strong>Google Summer of Code</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-card about-stat reveal" data-delay="100">
+                        <div class="card-inner center-inner">
+                            <div class="stat-value">GSoC</div>
+                            <p class="stat-label">Future Goal</p>
+                            <div class="mini-chart">
+                                <div class="bar" style="--h: 40%"></div>
+                                <div class="bar" style="--h: 65%"></div>
+                                <div class="bar" style="--h: 50%"></div>
+                                <div class="bar" style="--h: 90%"></div>
+                                <div class="bar" style="--h: 35%"></div>
+                                <div class="bar" style="--h: 70%"></div>
+                                <div class="bar" style="--h: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card about-orbit reveal" data-delay="200">
+                        <div class="card-inner center-inner">
+                            <div class="orbit-container">
+                                <div class="orbit-ring ring-1"></div>
+                                <div class="orbit-ring ring-2"></div>
+                                <div class="orbit-center">Open<br>Source</div>
+                                <div class="orbit-planet p1"></div>
+                                <div class="orbit-planet p2"></div>
+                                <div class="orbit-planet p3"></div>
+                            </div>
+                            <p class="orbit-label">Collaboration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Tech Stack</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-row reveal">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-level">Learning</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--width: 85%; --color: #3776ab;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row reveal" data-delay="50">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML / CSS</span>
+                            <span class="skill-level">Learning</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--width: 80%; --color: #e34f26;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row reveal" data-delay="100">
+                        <div class="skill-info">
+                            <span class="skill-name">Git / GitHub</span>
+                            <span class="skill-level">Improving</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--width: 70%; --color: #f05133;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row reveal" data-delay="150">
+                        <div class="skill-info">
+                            <span class="skill-name">Kotlin</span>
+                            <span class="skill-level">Exploring</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--width: 60%; --color: #7f52ff;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Projects</h2>
+
+                <div class="projects-list">
+                    <a href="https://github.com/arunan06/math_dash" target="_blank" rel="noopener noreferrer"
+                        class="project-card reveal">
+                        <div class="project-glow"></div>
+                        <div class="project-inner">
+                            <div class="project-top">
+                                <span class="tag tag-kotlin">Kotlin</span>
+                                <div class="project-arrow">↗</div>
+                            </div>
+                            <h3 class="project-title">Math Dash</h3>
+                            <p class="project-desc">A fast-paced math challenge game that tests the player's ability to
+                                quickly solve arithmetic problems under time pressure.</p>
+                            <div class="project-tech">
+                                <span>🎮 Game</span>
+                                <span>➕ Math</span>
+                                <span>📱 Android</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/arunan06/math-puzzle-app" target="_blank" rel="noopener noreferrer"
+                        class="project-card reveal" data-delay="100">
+                        <div class="project-glow"></div>
+                        <div class="project-inner">
+                            <div class="project-top">
+                                <span class="tag tag-app">App</span>
+                                <div class="project-arrow">↗</div>
+                            </div>
+                            <h3 class="project-title">Math Puzzle Game</h3>
+                            <p class="project-desc">A puzzle game where players solve different mathematical challenges
+                                and progress through multiple difficulty levels.</p>
+                            <div class="project-tech">
+                                <span>🧠 Logic</span>
+                                <span>🧩 Puzzle</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/arunan06/python-mini-projects/blob/main/quiz_game.py" target="_blank"
+                        rel="noopener noreferrer" class="project-card reveal" data-delay="200">
+                        <div class="project-glow"></div>
+                        <div class="project-inner">
+                            <div class="project-top">
+                                <span class="tag tag-python">Python</span>
+                                <div class="project-arrow">↗</div>
+                            </div>
+                            <h3 class="project-title">Python Quiz Game</h3>
+                            <p class="project-desc">A command-line quiz game built with Python that asks users different
+                                questions and calculates the score.</p>
+                            <div class="project-tech">
+                                <span>💻 CLI</span>
+                                <span>❓ Trivia</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" class="section footer-section">
+            <div class="container center-content">
+                <h2 class="huge-cta outline-text reveal">Let's Connect</h2>
+                <p class="connect-sub reveal" data-delay="100">Find me across the web</p>
+
+                <div class="social-grid reveal" data-delay="200">
+                    <a href="https://github.com/arunan06" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arunan2006" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.kaggle.com/arunsmart0006" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">
+                        <span>Kaggle</span>
+                    </a>
+                    <a href="https://leetcode.com/arun_0006" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">
+                        <span>LeetCode</span>
+                    </a>
+                </div>
+
+                <footer class="footer-bottom">
+                    <p>&copy; <span id="year"></span> Arunan — Student Developer</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
